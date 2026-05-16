@@ -18,6 +18,7 @@ real-world datasets from the UCI Machine Learning Repository.
 |---|---|
 | `PREPROCESSING.ipynb` | Outlier detection, capping, normalization, train/test split |
 | `SUPERVISED_LEARNING.ipynb` | 7 classification models with cross-dataset testing |
+| `SUPERVISED_PAPER_COMPARISON.ipynb` | Extended supervised learning comparing against Al Mudawi (2024) |
 | `UNSUPERVISED_LEARNING.ipynb` | K-Means, Hierarchical, GMM clustering |
 | `Day14_Parkinsons_Disease_Data.csv` | Dataset 1 (local file) |
 
@@ -59,6 +60,20 @@ Run notebooks in this exact order:
 - Random Forest
 - Support Vector Machine (SVM)
 - Gradient Boosting
+
+## Paper Comparison
+
+`SUPERVISED_PAPER_COMPARISON.ipynb` extends the methodology of:
+
+> Al Mudawi, N. (2024). Developing a Model for Parkinson's Disease Detection
+> Using Machine Learning Algorithms. CMC, vol.79, no.3.
+> DOI: 10.32604/cmc.2024.048967
+
+**Extension:** The reference paper evaluates models on a single dataset internally.
+I added cross-dataset generalization testing — training on Dataset 1 and testing
+on Dataset 3 to evaluate whether models generalize to unseen data from an
+independent source. All 9 models from the paper are reproduced and compared
+against my results.
 
 ### Unsupervised
 - K-Means Clustering
