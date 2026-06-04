@@ -20,6 +20,7 @@ real-world datasets from the UCI Machine Learning Repository.
 | `SUPERVISED_LEARNING.ipynb` | 7 classification models with cross-dataset testing |
 | `SUPERVISED_PAPER_COMPARISON.ipynb` | Extended supervised learning comparing against Al Mudawi (2024) |
 | `UNSUPERVISED_LEARNING.ipynb` | K-Means, Hierarchical, GMM clustering |
+| `04_SHAP_EXPLAINABILITY.ipynb` | SHAP explainability analysis on best model (Gradient Boosting) |
 | `Day14_Parkinsons_Disease_Data.csv` | Dataset 1 (local file) |
 
 ## Notebooks — Run Order
@@ -74,6 +75,23 @@ I added cross-dataset generalization testing — training on Dataset 1 and testi
 on Dataset 3 to evaluate whether models generalize to unseen data from an
 independent source. All 9 models from the paper are reproduced and compared
 against my results.
+
+## Explainability — SHAP Analysis
+
+`04_SHAP_EXPLAINABILITY.ipynb` explains why the Gradient Boosting model
+makes its predictions using SHAP (SHapley Additive exPlanations).
+
+Key findings:
+
+- PPE (Pitch Period Entropy) is the single most important feature —
+  medically consistent with known Parkinson's vocal symptoms
+- Cross-dataset SHAP comparison shows identical feature importance
+  on D1 and D3 — proving the model learned real patterns, not D1-specific memorization
+- Individual patient explanations show the model treats each patient
+  differently based on their specific voice measurements
+
+This analysis directly supports the cross-dataset generalization claim
+and adds medical interpretability to the model's predictions.
 
 ### Unsupervised
 - K-Means Clustering
